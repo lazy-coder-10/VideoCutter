@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/idTvSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"/>
+
+
+
+        <TextView
+            android:id="@+id/idTvCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:textAlignment="center"
+            android:padding="@dimen/_10sdp"
+            android:background="?selectableItemBackground"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/trans_grey"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/idTvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:background="?selectableItemBackground"
+            android:textAlignment="center"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/trans_grey"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/idTvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:background="?selectableItemBackground"
+            android:textAlignment="center"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/red_color_picker"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+

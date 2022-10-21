@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<!--    <include layout="@layout/content_videodubbed" />-->
+    <include layout="@layout/content_videodubbed_new" />
+    <include layout="@layout/bottom_sheet_videodubbed" />
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/add_video_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical">
+        <include layout="@layout/custom_progress_layout" />
+        <TextView
+            android:id="@+id/add_video_progress_text"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proccessing"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

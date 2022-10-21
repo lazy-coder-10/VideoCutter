@@ -1,0 +1,6 @@
+rootProject.name = 'VideoCutter'
+include ':app'
+include ':gpuv'
+include ':video-effect'
+include ':videotrimmer'
+include ':photoeditor'

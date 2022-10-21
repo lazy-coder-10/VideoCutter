@@ -1,0 +1,127 @@
+apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 29
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    defaultConfig {
+        applicationId "com.videocutter"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 13
+        versionName "2.5"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    android {
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+    }
+
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // Caution! In production, you need to generate your own keystore file.
+            // see https://reactnative.dev/docs/signed-apk-android.
+            signingConfig signingConfigs.debug
+//            minifyEnabled enableProguardInReleaseBuilds
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+
+    dependencies {
+        implementation fileTree(dir: "libs", include: ["*.jar"])
+        implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+        implementation platform('com.google.firebase:firebase-bom:26.0.0')
+        implementation 'com.google.firebase:firebase-analytics'
+        implementation 'com.google.firebase:firebase-crashlytics'
+        implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+        implementation 'androidx.appcompat:appcompat:1.2.0'
+        implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+        implementation 'com.google.android.material:material:1.2.0'
+
+        implementation 'com.android.support:multidex:1.0.3'
+
+
+        //Butterknife
+        implementation 'com.jakewharton:butterknife:10.0.0'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+        implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+
+        //Video Audio parse
+        implementation 'com.googlecode.mp4parser:isoparser:1.1.21'
+        implementation 'org.apache.commons:commons-io:1.3.2'
+
+        //circle_image
+        implementation 'de.hdodenhof:circleimageview:3.1.0'
+        implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+        implementation 'com.github.carlosmuvi:SegmentedProgressBar:0.6.0'
+
+        implementation 'com.wonderkiln:camerakit:0.13.4'
+
+
+        //Gallery-Camera picker
+        implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+
+
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+
+        implementation 'androidx.recyclerview:recyclerview:1.1.0'
+        implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+        implementation project(':photoeditor')
+
+        implementation project(':video-effect')
+        //    implementation project(':video-compressor')
+
+        //rasheed implemented for gridview
+        // implementation project(':raaz_asymmetric_grid_fuction')
+        implementation project(':gpuv')
+        implementation project(':videotrimmer')
+        implementation 'com.google.android.exoplayer:exoplayer-core:2.8.4'
+        implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.4'
+        implementation 'com.google.android.exoplayer:exoplayer:2.10.4'
+        implementation 'com.arthenica:mobile-ffmpeg-full-gpl:4.4.LTS'
+        implementation "org.jcodec:jcodec-android:0.1.9"
+        implementation 'com.github.yalantis:ucrop:2.2.8'
+
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+
+
+    }
+}

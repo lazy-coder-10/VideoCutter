@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/color_picker_view"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@android:color/holo_red_dark"
+        tools:text="" />
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/layout_color_select"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            app:srcCompat="@drawable/ic_done_white"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    >
+
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:resize_mode="fill"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:use_controller="false"/>
+
+    <RelativeLayout
+        android:id="@+id/idRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        >
+
+        <ImageView
+            android:id="@+id/idIvClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_photo_close"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/idBtnCutVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Next"
+            android:gravity="center"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Trim Video"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:layout_centerInParent="true"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/durationView"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/videoTrimmerView"
+        android:layout_marginBottom="12dp"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"/>
+
+    <idv.luchafang.videotrimmer.VideoTrimmerView
+        android:id="@+id/videoTrimmerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:vtv_window_bar_width="10dp"
+        app:vtv_window_border_color="@android:color/white"
+        app:vtv_window_border_width="2dp"
+        app:vtv_window_left_bar="@drawable/trimmer_left_bar"
+        app:vtv_window_right_bar="@drawable/trimmer_right_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

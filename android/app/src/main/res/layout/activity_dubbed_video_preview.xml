@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/pvVideoPreview_DubVideoPreLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        app:controller_layout_id="@layout/playerview_controller"
+        app:show_timeout="1000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.videocutter.videodub_addsound.photoeditor.PhotoEditorView
+        android:id="@+id/ivImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+        <ImageView
+            android:id="@+id/ivBack_DubVideoPreLay"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:srcCompat="@drawable/ic_photo_close"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/black_trasp"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_delete" />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/effects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/text_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_aa" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/camera_filter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/text_add"
+            android:src="@drawable/ic_video_filter"
+            app:tint="@color/white"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/music_filter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/camera_filter"
+            app:tint="@color/white"/>
+
+        <ImageView
+            android:id="@+id/sticker_filter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/music_filter"
+            android:src="@drawable/ic_video_emoji" />
+        <Button
+            android:id="@+id/btnNext_DubVideoPreLay"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/gradient_bg"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
