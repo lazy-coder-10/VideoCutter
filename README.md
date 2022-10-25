@@ -1,6 +1,6 @@
 # VideoCutter - Android
 
-Remove the unwanted part from video by adjusting starting point and ending point in Android. 
+Remove the unwanted part from video by adjusting starting point and ending point in Android. For Clipping the video, internally I have used uses FFMpeg. 
 
 
 ## Core Features ##
